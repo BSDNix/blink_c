@@ -1,7 +1,7 @@
 <?php
 if(!empty($_GET['act']))
 {
-  shell_exec('sudo ./lampje');
+  shell_exec('./lampje');
 } else {
 ?>
 
