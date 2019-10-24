@@ -30,7 +30,7 @@ main(void)
   signal(SIGINT, interruptHandler);
   if (-1 == wiringPiSetup())
   {
-    printf('Setup ging stuk\n");
+    printf("Setup ging stuk\n");
     return 1;
    }
 pinMode(7, OUTPUT);
