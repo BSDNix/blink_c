@@ -6,17 +6,14 @@
 static void sterflampje();
 static void interruptHandler(const int);
 
-static void sterflampje()
-{
+static void sterflampje() {
     digitalWrite(7, LOW);
 }
-static void interruptHandler(const int signal)
-{
+static void interruptHandler(const int signal) {
   sterflampje();
   exit(0);
 }
-static void knipperLampje()
-{
+static void knipperLampje() {
     digitalWrite(7. HIGH);
     delay(300);
     digitalWrite(7, LOW);
@@ -25,11 +22,9 @@ static void knipperLampje()
     delay(300);
     digitalWrite(7, LOW);
 }
-main(void)
-{
+main(void) {
   signal(SIGINT, interruptHandler);
-  if (-1 == wiringPiSetup())
-  {
+  if (-1 == wiringPiSetup()) {
     printf("Setup ging stuk\n");
     return 1;
    }
@@ -37,8 +32,7 @@ pinMode(7, OUTPUT);
 
 sterflampje();
 
-while(1)
-{
+while(1){
    knipperLampje();
    return 0;
 }
